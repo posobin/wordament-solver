@@ -1,7 +1,7 @@
 wordament-solver
 ================
 
-App that helps you play the Wordament game for WP/iOS. Here is a [video](http://youtu.be/Y5DAmTRAxzU) demonstrating the usage.
+App that helps you play the Wordament game for WP/iOS. Here is a [video](http://youtu.be/Y5DAmTRAxzU) demonstrating the way it works.
 
 ## Usage
 
