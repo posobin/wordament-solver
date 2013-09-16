@@ -27,6 +27,9 @@ App that helps you play the Wordament game for WP/iOS. Here is a [video](http://
 - [ ] Add GUI
 - [ ] Make robot for fully automatic gameplay (xD)
 
-## Acknowledgements
+## Acknowledgements and link
 
 * `squares.cpp` example from OpenCV for giving me a headstart
+* [How to integrate Tesseract OCR and OpenCV](http://opencv-code.com/tutorials/how-to-integrate-tesseract-ocr-and-opencv/)
+* [Automatic perspective correction for quadrilateral objects](http://opencv-code.com/tutorials/automatic-perspective-correction-for-quadrilateral-objects/)
+* [Detecting simple shapes in an image](http://opencv-code.com/tutorials/detecting-simple-shapes-in-an-image/)
