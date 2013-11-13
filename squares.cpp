@@ -141,7 +141,7 @@ std::vector<std::vector<cv::Mat>> cutSquares(cv::Mat image, std::vector<std::vec
   return table;
 }
 
-std::string extractLetters(cv::Mat square, bool check_dbg = false)
+std::string extractLetters(cv::Mat square)
 {
   cv::Mat pyr, timg;
   // down-scale and upscale the image to filter out the noise
@@ -277,12 +277,10 @@ int main()
     for (int i = 0; i < images_table.size(); ++i)
       for (int j = 0; j < images_table[i].size(); ++j)
       {
-        if (i == 3 && j == 0) table[i][j] = extractLetters(images_table[i][j], true);
         table[i][j] = extractLetters(images_table[i][j]);
         cv::putText(frame, table[i][j], cv::Point(50*(i+1), 50*(j+1)), cv::FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255, 0, 0));
       }
     cv::imshow(window_name, frame);
-    //cv::waitKey();
   }
   // Processing the table
   getWords(table, trie);
