@@ -14,6 +14,7 @@
 #include <set>
 #include <math.h>
 #include <string.h>
+#include <locale.h>
 
 static const char* window_name = "haha";
 static const int columns = 4;
@@ -187,6 +188,7 @@ std::string extractLetters(cv::Mat square)
       cv::Point(timg.size().width, timg.size().height), cv::Scalar(255,255,255), CV_FILLED);
 
   tesseract::TessBaseAPI tess;
+  setlocale (LC_NUMERIC, "C");
   tess.Init(NULL, "eng");
   tess.SetVariable("tessedit_char_whitelist", "ABCDEFGHIJKLMNOPQRSTUVWXYZ/-");
   tess.SetImage((uchar*)letters_single_channel.data,
@@ -199,9 +201,6 @@ std::string extractLetters(cv::Mat square)
       str.push_back(out[i]);
   if (str == "" && bounds.width < bounds.height * 0.3)
       str = "I";
-  //cv::imshow(window_name, letters_single_channel);
-  //std::cout << str << std::endl;
-  //cv::waitKey();
   return str;
 }
 
